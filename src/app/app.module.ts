@@ -12,6 +12,7 @@ import { VerGramaticaComponent } from './modules/gramatica/ver-gramatica/ver-gra
 import { ListarGramaticaComponent } from './modules/gramatica/listar-gramatica/listar-gramatica.component';
 import { MatTableModule } from '@angular/material/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatTableModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

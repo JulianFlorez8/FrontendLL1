@@ -1,19 +1,20 @@
-<div class="body">
+<div class="body" [formGroup]="uploadForm">
   <div class="body-item">
     <div class="image-upload">
       <label for="file-input">
         <img src="../../../../assets/JSON.png" />
       </label>
       <input
+        formControlName="file"
         id="file-input"
         type="file"
-        (change)="cambio($event)"
+        (change)="onFileSelect($event)"
         accept=".json"
       />
     </div>
     <span>{{ json }}</span>
   </div>
-  <div class="body-item" [routerLink]="['/gramatica/ver-gramatica/']">
+  <div class="body-item" (click)="cargarArchivo()">
     <img src="./assets/VERIFICAR.png" alt="" />
     <span>Verificar LL1</span>
   </div>

@@ -8,8 +8,6 @@ import { ListarGramaticaComponent } from './listar-gramatica/listar-gramatica.co
 
 @NgModule({
   declarations: [
-    VerGramaticaComponent,
-    ListarGramaticaComponent
   ],
   imports: [
     CommonModule,

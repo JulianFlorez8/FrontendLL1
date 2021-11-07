@@ -1,0 +1,80 @@
+.toolbar {
+    background: #003B70;
+    justify-content: space-between;
+}
+
+.toolbar-div {
+    justify-content: space-between;
+}
+
+.toolbar span {
+    margin-left: 2rem;
+}
+
+.toolbar-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.toolbar-inicio {
+    align-items: center;
+    display: flex;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    justify-content: center;
+}
+.body table{
+    margin-top: 3rem;
+}
+.body-top{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 2rem;
+}
+.body-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+.button{
+    color: white;
+    background-color: #003B70;
+    
+}
+.body-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+.skin{
+    background-image: url("../../../../assets/JSON.png");
+    width: 137px;
+    height: 160px;
+}
+
+.mat-table{
+    width:  90% !important;  
+    background: white;
+}
+.mat-cell{
+    color: black;
+}
+.mat-header-cell{
+    color: black;
+}
+
+.thead-table{
+    color: white;
+    background: #003B70;
+}

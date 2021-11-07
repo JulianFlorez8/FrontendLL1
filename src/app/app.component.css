@@ -1,0 +1,24 @@
+.toolbar {
+    background: #003B70;
+    justify-content: space-between;
+}
+
+.toolbar-div {
+    justify-content: space-between;
+}
+
+.toolbar span {
+    margin-left: 2rem;
+}
+.toolbar-link{
+    cursor: pointer;
+}
+.toolbar-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.toolbar-inicio {
+    align-items: center;
+    display: flex;
+}

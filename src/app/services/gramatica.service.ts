@@ -7,7 +7,7 @@ import { ArchivoModel } from 'src/app/modelos/archivo.model'
   providedIn: 'root'
 })
 export class GramaticaService {
-  entity: String='CargarRIPS';
+  entity: String='CargarGramatica';
   constructor(
     private http: HttpClient
   ) { 

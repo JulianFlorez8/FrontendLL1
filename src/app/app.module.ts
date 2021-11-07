@@ -10,13 +10,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { VerGramaticaComponent } from './modules/gramatica/ver-gramatica/ver-gramatica.component';
 import { ListarGramaticaComponent } from './modules/gramatica/listar-gramatica/listar-gramatica.component';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     PaginaInicioComponent,
     VerGramaticaComponent,
-    ListarGramaticaComponent
+    ListarGramaticaComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,10 +26,11 @@ import {MatTableModule} from '@angular/material/table';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatTableModule
-    
+    MatTableModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

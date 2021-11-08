@@ -20,21 +20,5 @@
       
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
-
-    <ng-container matColumnDef="Tipo">
-      <th class="thead-table" mat-header-cell *matHeaderCellDef>Ver</th>
-      <td
-        class="table-link"
-        [routerLink]="['/gramatica/ver-gramatica/']"
-        mat-cell
-        *matCellDef="let element"
-      >
-        <img class="table-icon" src="./assets/VERGRAMATICA.png" alt="" />
-      </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 </div>

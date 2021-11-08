@@ -9,13 +9,13 @@ const routes: Routes = [
     component:VerGramaticaComponent
   },
   {
-    path:'listar-gramatica',
-    component:ListarGramaticaComponent
-  }
+    path: 'listar-gramatica',
+    component: ListarGramaticaComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class GramaticaRoutingModule { }
+export class GramaticaRoutingModule {}

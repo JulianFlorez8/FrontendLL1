@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { GramaticaService } from 'src/app/services/gramatica.service';
 
+export interface PeriodicElement {
+  name: string;
+  position: number;
+  weight: number;
+  symbol: string;
+}
 @Component({
   selector: 'app-pagina-inicio',
   templateUrl: './pagina-inicio.component.html',
@@ -9,7 +15,12 @@ import { GramaticaService } from 'src/app/services/gramatica.service';
 })
 export class PaginaInicioComponent implements OnInit {
   json: string = 'Cargar Archivo JSON';
+  todo: any = [];
+  primeros: any = [];
+  siguientes: any = [];
+  prediccion: any = [];
   uploadForm: FormGroup = this.fb.group({});
+
   constructor(private fb: FormBuilder, private service: GramaticaService) {}
 
   ngOnInit(): void {
@@ -29,10 +40,14 @@ export class PaginaInicioComponent implements OnInit {
     this.service.cargarArchivo(formData).subscribe(
       (data) => {
         console.log(data);
+        this.todo = data;
+        this.primeros = this.todo.primeros;
+        this.siguientes = this.todo.siguientes;
+        this.prediccion = this.todo.conjuntoPrediccion;
         //this.fgUpload.image.setValue(data.ruta);
       },
       (err) => {
-        alert('Error al cargar el recibo');
+        alert('Error al cargar el archivo');
       }
     );
   }
@@ -52,4 +67,6 @@ export class PaginaInicioComponent implements OnInit {
   get fgUpload() {
     return this.uploadForm.controls;
   }
+
+  displayedColumns: string[] = ['NoTerminal', 'Tipo'];
 }

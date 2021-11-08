@@ -1,7 +1,9 @@
 <div class="body-top">
-    <button mat-button class="button" routerLink="/inicio">Nueva gramática</button>
-    <h2>Lista de gramaticas ingresadas</h2>
-    <span>Contador de gramáticas:1</span>
+  <button mat-button class="button" routerLink="/inicio">
+    Nueva gramática
+  </button>
+  <h2>Lista de gramaticas ingresadas</h2>
+  <span>Contador de gramáticas:1</span>
 </div>
 <div class="body">
     <table mat-table  [dataSource]="gramaticas" class="mat-elevation-z8">
@@ -20,5 +22,19 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
 
+    <ng-container matColumnDef="Tipo">
+      <th class="thead-table" mat-header-cell *matHeaderCellDef>Ver</th>
+      <td
+        class="table-link"
+        [routerLink]="['/gramatica/ver-gramatica/']"
+        mat-cell
+        *matCellDef="let element"
+      >
+        <img class="table-icon" src="./assets/VERGRAMATICA.png" alt="" />
+      </td>
+    </ng-container>
 
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
 </div>

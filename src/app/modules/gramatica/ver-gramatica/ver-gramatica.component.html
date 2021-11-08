@@ -11,12 +11,12 @@
   <table mat-table [dataSource]="primeros" class="mat-elevation-z8">
     <ng-container matColumnDef="NoTerminal">
       <th class="thead-table" mat-header-cell *matHeaderCellDef>No Terminal</th>
-      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.Nombre }}</td>
     </ng-container>
 
     <ng-container matColumnDef="Tipo">
       <th class="thead-table" mat-header-cell *matHeaderCellDef>Primeros</th>
-      <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.Produciones }}</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -26,12 +26,12 @@
   <table mat-table [dataSource]="siguientes" class="mat-elevation-z8">
     <ng-container matColumnDef="NoTerminal">
       <th class="thead-table" mat-header-cell *matHeaderCellDef>No Terminal</th>
-      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.Nombre }}</td>
     </ng-container>
 
     <ng-container matColumnDef="Tipo">
       <th class="thead-table" mat-header-cell *matHeaderCellDef>Siguientes</th>
-      <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.Produciones }}</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -41,14 +41,14 @@
   <table mat-table [dataSource]="prediccion" class="mat-elevation-z8">
     <ng-container matColumnDef="NoTerminal">
       <th class="thead-table" mat-header-cell *matHeaderCellDef>No Terminal</th>
-      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.Nombre }}</td>
     </ng-container>
 
     <ng-container matColumnDef="Tipo">
       <th class="thead-table" mat-header-cell *matHeaderCellDef>
         Conjunto Predicción
       </th>
-      <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.Produciones }}</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

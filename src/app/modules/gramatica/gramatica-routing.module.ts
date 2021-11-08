@@ -5,17 +5,17 @@ import { VerGramaticaComponent } from './ver-gramatica/ver-gramatica.component';
 
 const routes: Routes = [
   {
-    path:'ver-gramatica',
-    component:VerGramaticaComponent
+    path: 'ver-gramatica/:id',
+    component: VerGramaticaComponent,
   },
   {
-    path:'listar-gramatica',
-    component:ListarGramaticaComponent
-  }
+    path: 'listar-gramatica',
+    component: ListarGramaticaComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class GramaticaRoutingModule { }
+export class GramaticaRoutingModule {}

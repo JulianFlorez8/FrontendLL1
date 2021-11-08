@@ -39,4 +39,8 @@ export class GramaticaService {
   obtenerPrimeros(id: number): Observable<PrimerosBDModel[]>{//Revisar retorno
     return this.http.get<PrimerosBDModel[]>( `${ServiceConfig.BASE_URL}${this.entityPrimeros}/${id}`)
   }
+  obtenerContador(): Observable<any>{//Revisar retorno
+    return this.http.get<any>( `${ServiceConfig.BASE_URL}${this.entityGramatica}/count`)
+  }
+
 }

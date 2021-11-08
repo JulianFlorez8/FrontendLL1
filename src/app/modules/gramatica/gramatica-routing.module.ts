@@ -5,7 +5,7 @@ import { VerGramaticaComponent } from './ver-gramatica/ver-gramatica.component';
 
 const routes: Routes = [
   {
-    path:'ver-gramatica',
+    path:'ver-gramatica/:id',
     component:VerGramaticaComponent
   },
   {

@@ -13,12 +13,15 @@ import { ListarGramaticaComponent } from './modules/gramatica/listar-gramatica/l
 import { MatTableModule } from '@angular/material/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalComponent } from './modules/modal/modal.component';
+import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
     PaginaInicioComponent,
     VerGramaticaComponent,
     ListarGramaticaComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],

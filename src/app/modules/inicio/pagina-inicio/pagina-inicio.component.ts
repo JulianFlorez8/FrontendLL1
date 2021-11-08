@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { GramaticaService } from 'src/app/services/gramatica.service';
+import { ModalComponent } from '../../modal/modal.component';
 
 export interface PeriodicElement {
   name: string;
@@ -26,8 +28,9 @@ export class PaginaInicioComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private service: GramaticaService,
-    private router: Router
-  ) {}
+    private router: Router,
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
     this.construirFormularioCarga();
@@ -64,16 +67,18 @@ export class PaginaInicioComponent implements OnInit {
             this.gramaticas.length + 1,
           ]);
         } else {
-          console.log('No es');
+          this.dialog.open(ModalComponent);
+          
         }
       },
       (err) => {
-        alert('Error al cargar el archivo');
+        this.dialog.open(ModalComponent);
+       
       }
     );
   }
 
-  async mostrarError() {}
+  async mostrarError() { }
 
   onFileSelect(event: any) {
     if (event.target.value.split('\\')[2]) {

@@ -14,69 +14,9 @@
     </div>
     <span>{{ json }}</span>
   </div>
-  <div
-    class="body-item"
-    (click)="cargarArchivo()"
-    [routerLink]="['/parametrizacion/radicacion/validaciones/editar-campo/', 5]"
-  >
+  <div class="body-item" (click)="cargarArchivo()">
     <img src="./assets/VERIFICAR.png" alt="" />
     <span>Verificar LL1</span>
   </div>
 </div>
-<div class="body-top">
-  <div class="body-item" *ngIf="todo.es == true">
-    <span>La gramática es LL1</span>
-  </div>
-  <div class="body-item" *ngIf="todo.es == false">
-    <span>La gramática no es LL1</span>
-  </div>
-  <span>Contador de gramáticas:1</span>
-</div>
-<div class="body">
-  <table mat-table [dataSource]="primeros" class="mat-elevation-z8">
-    <ng-container matColumnDef="NoTerminal">
-      <th class="thead-table" mat-header-cell *matHeaderCellDef>No Terminal</th>
-      <td mat-cell *matCellDef="let element">{{ element.variable }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="Tipo">
-      <th class="thead-table" mat-header-cell *matHeaderCellDef>Primeros</th>
-      <td mat-cell *matCellDef="let element">{{ element.produciones }}</td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  </table>
-
-  <table mat-table [dataSource]="siguientes" class="mat-elevation-z8">
-    <ng-container matColumnDef="NoTerminal">
-      <th class="thead-table" mat-header-cell *matHeaderCellDef>No Terminal</th>
-      <td mat-cell *matCellDef="let element">{{ element.variable }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="Tipo">
-      <th class="thead-table" mat-header-cell *matHeaderCellDef>Siguientes</th>
-      <td mat-cell *matCellDef="let element">{{ element.produciones }}</td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  </table>
-
-  <table mat-table [dataSource]="prediccion" class="mat-elevation-z8">
-    <ng-container matColumnDef="NoTerminal">
-      <th class="thead-table" mat-header-cell *matHeaderCellDef>No Terminal</th>
-      <td mat-cell *matCellDef="let element">{{ element.variable }}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="Tipo">
-      <th class="thead-table" mat-header-cell *matHeaderCellDef>
-        Conjunto Predicción
-      </th>
-      <td mat-cell *matCellDef="let element">{{ element.producciones }}</td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  </table>
-</div>
+<div class="body-top"></div>

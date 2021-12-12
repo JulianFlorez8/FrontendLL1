@@ -15,6 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalComponent } from './modules/modal/modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { GramticaLRARComponent } from './modules/gramtica-lrar/gramtica-lrar.component';
+import { GramticaL0Component } from './modules/gramtica-l0/gramtica-l0.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +24,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     VerGramaticaComponent,
     ListarGramaticaComponent,
     ModalComponent,
+    GramticaLRARComponent,
+    GramticaL0Component,
   ],
   imports: [
     BrowserModule,

@@ -95,7 +95,9 @@
               "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/app/modules/gramtica-l0/analizadorlo.js"
+            ]
           }
         },
         "lint": {

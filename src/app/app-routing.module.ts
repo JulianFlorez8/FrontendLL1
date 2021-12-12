@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GramticaL0Component } from './modules/gramtica-l0/gramtica-l0.component';
 import { PaginaInicioComponent } from './modules/inicio/pagina-inicio/pagina-inicio.component';
 
 const routes: Routes = [
@@ -12,6 +13,10 @@ const routes: Routes = [
     path:"gramatica",
     loadChildren: () =>
     import('./modules/gramatica/gramatica.module').then((m) => m.GramaticaModule),
+  },
+   {
+    path:'gramaticaL0',
+    component:GramticaL0Component
   },
   {
     path:'**',

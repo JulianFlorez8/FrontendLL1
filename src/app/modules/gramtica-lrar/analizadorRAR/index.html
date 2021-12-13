@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Analizador Sintáctico LRAR</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="js/jquery.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<script src="LRAR.js"></script>
+
+		<style>
+			.spacer {
+				margin: 50px 0px 50px 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="spacer">Analizador LRAR -> LR(1)</h1>
+			<h3 class="spacer">El analizador LRAR Es la forma de resumir las gramáticas LR(1)</h3>
+			<div class="container">
+				<div class="row">
+				  <div class="col">
+					<label for="txt_terminales">Símbolos Terminales</label>
+					<input class="form-control" id="txt_terminales" type="text"
+					placeholder="
+					Ejemplo: a b c"/>
+				  </div>
+				  <div class="col">
+					<label for="txt_no_terminales">Símbolos No-Terminales</label>
+					<input class="form-control" id="txt_no_terminales" type="text"
+						placeholder="
+						Ejemplo: S A B C"/>
+				  </div>
+				  <div class="col">
+					<label for="txt_simbolo_inicial">Símbolo Inicial</label>
+					<input class="form-control" id="txt_simbolo_inicial" type="text"
+					placeholder="Símbolo Inicial. Ejemplo: S"/>
+				  </div>
+				</div>
+			  </div>
+
+			<blockquote>
+				Ingreso de produciones:
+				<br>
+				Formato = Variable-> produccion
+			</blockquote>
+
+			<div class="form-group">
+				<label for="txt_produccion">Agregar nueva Producción</label>
+				<div class="input-group">
+					<input class="form-control" id="txt_produccion" type="text"
+						placeholder="Escriba una producción. Ejemplo: S -> BAa"/>
+					<span class="input-group-btn">
+						<button class="btn  btn-danger" type="button"
+							onclick="location.reload()">Reiniciar</button>
+						<button class="btn  btn-primary" type="button"
+							onclick="insertar_produccion()">Agregar produccion</button>
+					</span>
+				</div>
+			</div>
+
+			<div class="container" id="producciones" hidden>
+				<div class="row">
+				  <div class="col">
+					<table id="tbl_producciones" class="table table-striped table-bordered">
+						<tr class="secondary">
+							<th>Producción</th>
+						</tr>
+						
+					</table>
+				  </div>
+				  <div class="col">
+					<table id="tbl_produccionespunt" class="table table-striped table-bordered">
+						<tr class="secondary">
+							<th>Puntuada</th>
+						</tr>
+						
+					</table>
+				  </div>
+				 
+				</div>
+				<button class="btn btn-success"
+				onclick="generarTablaAnalisis()"data-bs-toggle="modal" data-bs-target="#modaltabla" >
+				Generar Tabla sintáctica LRAR</button>
+			  </div>
+			  
+			  </div>
+			  
+
+			  <div class="modal fade" id="modaltabla" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-xl">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <h5 class="modal-title" id="exampleModalLabel">Tabla de analisis LRAR</h5>
+					  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div id="analisis" hidden>
+							<div class="spacer" id="div_tabla_analisis">
+								
+								<table id="tbl_analisis" class="table table-striped table-bordered">
+								</table>
+							</div>
+			
+							<blockquote>
+								 <strong>Extra</strong> 
+							</blockquote>
+			
+							<div class="form-group">
+								<label for="txt_cadena">Evaluar Cadena</label>
+								<div class="input-group">
+									<input class="form-control" id="txt_cadena" type="text"
+										placeholder="Escriba una cadena."/>
+									<span class="input-group-btn">
+										<button class="btn btn-info" type="button"
+											onclick="evaluar_cadena()">Evaluar</button>
+									</span>
+								</div>
+							</div>
+			
+							<div class="spacer" id="div_tabla_decisiones">
+								<label for="tbl_decisiones">Tabla de Decisiones</label>
+								<table id="tbl_decisiones_2" class="table table-striped table-bordered">
+									<thead class="thead-default">
+										<tr>
+											<th>Pila</th>
+											<th>Cadena de Entrada</th>
+											<th>Acción</th>
+										</tr>
+									</thead>
+									<tbody id="tbl_decisiones">
+			
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+					  
+					</div>
+				  </div>
+				</div>
+			  </div>
+
+
+
+	</body>
+</html>

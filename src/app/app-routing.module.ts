@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GramticaL0Component } from './modules/gramtica-l0/gramtica-l0.component';
+import { GramticaLRARComponent } from './modules/gramtica-lrar/gramtica-lrar.component';
 import { PaginaInicioComponent } from './modules/inicio/pagina-inicio/pagina-inicio.component';
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
    {
     path:'gramaticaL0',
     component:GramticaL0Component
+  },
+    {
+    path:'gramaticaLRAR',
+    component:GramticaLRARComponent
   },
   {
     path:'**',

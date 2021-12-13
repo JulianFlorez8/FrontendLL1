@@ -20,6 +20,7 @@ export class VerGramaticaComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  
     this.obtenerPrimeros();
     this.obtenerSiguientes();
     this.obtenerPrediccion();
